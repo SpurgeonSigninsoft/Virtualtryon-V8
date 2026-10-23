@@ -1,0 +1,13 @@
+{
+  "name": "virtual-glasses-v8",
+  "version": "8.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "dev": "node scripts/dev.mjs",
+    "self-test": "node scripts/self-test.mjs"
+  }
+}

@@ -1,0 +1,52 @@
+* { box-sizing: border-box; }
+html, body, #__next { min-height: 100%; }
+body {
+  margin: 0;
+  background: #f2f3f5;
+  color: #17191d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+button, input { font: inherit; }
+button { cursor: pointer; }
+.shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 34px 0 48px; }
+.topbar { margin-bottom: 24px; }
+.eyebrow { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; color: #555d6a; margin-bottom: 8px; }
+h1 { margin: 0; font-size: clamp(30px, 5vw, 54px); line-height: 1; }
+.topbar p { max-width: 760px; color: #5d6470; line-height: 1.55; }
+.card, .panel, .choiceCard { border: 1px solid #d9dde4; background: white; border-radius: 14px; }
+.centerCard { padding: 32px; margin-top: 40px; }
+.choiceGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.choiceCard { text-align: left; min-height: 180px; padding: 28px; transition: border-color .15s ease, transform .15s ease; }
+.choiceCard:hover { border-color: #20242b; transform: translateY(-2px); }
+.choiceCard strong { display: block; font-size: 24px; margin-bottom: 10px; }
+.choiceCard span { display: block; color: #606875; line-height: 1.5; }
+.panel { margin-top: 18px; padding: 18px; }
+.panel h2 { margin: 0 0 5px; font-size: 18px; }
+.panel p { margin: 0; color: #646b76; }
+.panelTitleRow, .studioToolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.toolbarActions { display: flex; gap: 10px; }
+.button { display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; border: 1px solid #1f2329; padding: 10px 14px; font-weight: 700; }
+.primaryButton { background: #17191d; color: white; }
+.secondaryButton { background: white; color: #17191d; }
+.button:disabled { opacity: .55; cursor: default; }
+.textButton { border: 0; background: transparent; padding: 8px 0; font-weight: 700; color: #343941; }
+.hiddenInput, .hiddenVideo { display: none; }
+.canvasWrap { position: relative; margin-top: 16px; overflow: hidden; border-radius: 12px; background: #101114; min-height: 300px; display: grid; place-items: center; }
+.tryOnCanvas { display: block; width: 100%; height: auto; max-height: 76vh; object-fit: contain; }
+.canvasPlaceholder { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: #cfd3da; pointer-events: none; }
+.statusText { margin-top: 12px !important; font-size: 14px; color: #555e69 !important; }
+.frameStrip { display: flex; gap: 10px; overflow-x: auto; padding: 14px 1px 2px; }
+.frameTile { flex: 0 0 150px; min-height: 105px; padding: 10px; border: 1px solid #d8dce2; border-radius: 10px; background: #fafbfc; }
+.frameTile.selected { border: 2px solid #17191d; }
+.frameTile img { width: 100%; height: 55px; object-fit: contain; display: block; }
+.frameTile span { display: block; margin-top: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
+.sliders { margin-top: 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
+.sliders label span { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; }
+.sliders input { width: 100%; }
+.footerNote { margin-top: 20px; color: #717985; font-size: 13px; }
+@media (max-width: 700px) {
+  .choiceGrid, .sliders { grid-template-columns: 1fr; }
+  .panelTitleRow, .studioToolbar { align-items: flex-start; flex-direction: column; }
+  .toolbarActions { width: 100%; }
+  .toolbarActions .button { flex: 1; }
+}

@@ -1,0 +1,13 @@
+Virtual Glasses V8.0.1 — Windows/Node 24 launcher fix
+
+VIRTUAL GLASSES V8 - WINDOWS
+
+Open this folder in your editor, then in PowerShell run:
+
+1) npm.cmd run install:all
+2) npm.cmd run self-test
+3) npm.cmd run dev
+
+Open http://localhost:3000
+
+The camera will NOT start until you choose Live Camera and click Start camera.
